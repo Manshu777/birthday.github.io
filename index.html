@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Festive&family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
+    <title>Abhishek Birthday</title>
+    <style>
+       *{
+        font-family: 'Mochiy Pop P One', sans-serif;
+       }
+        body{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            height: 100vh;
+            background: linear-gradient(#210947,#5d81cf);
+    
+        }
+        section{
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            padding: 100px;
+            
+        }
+      
+        section img{
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            object-fit: cover;
+  
+        }
+        #moon1{
+            mix-blend-mode: screen;
+        }
+        #sloth{
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+        }
+        #cake{
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+        }
+        #text{
+            position: absolute;
+            
+            text-align-last: top;
+            font-size:3em;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            width: 100%;
+            -webkit-box-reflect:below 1px linear-gradient(transparent,#0004);
+            line-height: 0.7em;
+            animation:animate 5s linear infinite;
+
+        }
+        @keyframes animate{
+            0%,18%,20%,50%,60%,65.1%,80%,90.1%,92%{
+                color:#0e3742;
+                text-shadow: none;
+            }
+           18.1%,20.1%,30%,50%,60%,65.1%,80%,90.1%,92.1% ,100%{
+                color:#fff;
+                text-shadow:  0 0 10px #03bcf4,
+                0 0 20px #03bcf4,
+                0 0 40px #03bcf4,
+                0 0 80px #03bcf4,
+                0 0 160px #03bcf4;
+            }
+
+        }
+        
+        
+        .birthdaycard{
+            position: absolute;
+            width:300px;
+            height:400px;
+            cursor: pointer;
+            transform-style: preserve-3d; 
+            transform: perspective(250px);
+            transition: 1s;
+        }
+        .birthdaycard:hover{
+            transform:perspective(2500px) rotate(5deg);
+            box-shadow: inset 100px 20px 100px rgba(0,0,0,0.20),0px 10px 100px rgba(0,0,0,0.4);
+        }
+        .birthdaycard:hover .cardfront{
+            transform: rotateY(-160deg);
+        }
+        .birthdaycard:hover .happy {
+            visibility: hidden;
+        }
+        .cardfront{
+            position: relative;
+             background-color:#210947; 
+            width:300px; height:400px;
+            transform-origin: left ;
+            overflow: hidden;
+            box-shadow: inset 100px 20px 100px rgba(0,0,0,0.2), 30px 0px 50px rgba(0,0,0, 0.4);
+            transition: 0.6s;
+          
+         
+        }
+        .happy{
+            font-family: 'Mochiy Pop P One', sans-serif;
+            margin:30px;
+            text-align: center;
+            background-image: linear-gradient(120deg,#f6d365 , #fda085 100%);
+            transition: 0.1s;
+        }
+        
+        .cardinside{   
+        position: absolute;
+        background-color:#210947; 
+        left: 0; top:0;
+            width:300px; height:400px;
+            box-shadow: inset 100px 20px 100px rgba(0,0,0,0.2);
+            z-index: -1;
+        }
+        #msg{
+            font-family: 'Mochiy Pop P One', sans-serif;
+            justify-content: center;
+            color: #fff;
+        }
+        p{
+            font-family: 'Mochiy Pop P One', sans-serif;
+            margin:40px;
+            color: #fff;
+        }
+       
+        .name{
+            position:absolute;
+            left: 150px;
+            top:200px;
+            color: #fff;
+        }
+        .back{
+            color: rgb(12, 9, 9);
+            text-align: center;
+            margin:30px;
+            background-image: linear-gradient(120deg,#f6d365 , #fda085 100%);
+            outline-style:dotted;
+
+        }
+      
+    </style>
+</head>
+<body>
+    <h2 id="text">Abhishek</h2>
+    <section>
+     
+        <img src="stars.png" id="star">
+        <img src="" id="ballon">
+
+    </section>
+    
+   <div class="birthdaycard"> 
+  
+     <div class="cardfront" ><h3 class= "happy">Happy Birthday</h3>
+  
+     <img src="sloth.png" id="sloth">
+    
+     </div>
+     <div class="cardinside">
+        
+         <h3 class= "back">Happy Birthday <br>ABHISHEK</h3>
+         <h3 id="abhi"></h3>
+        
+    <p>Dear Friend</p>
+    <p>Happy birthday. I pray all your birthday wishes to come true. All of us wish you a day filled with happiness and a joyous year ahead. May God Bless you Bro.. </p>
+         <p class="name"></p>
+        
+</div>
+
+</div>
+<script>
+    var audio = document.createElement('audio');
+    audio.setAttribute('src','hbd2.mp3');
+    audio.loop = true;
+    audio.play();
+</script>
+</body>
+</html>
